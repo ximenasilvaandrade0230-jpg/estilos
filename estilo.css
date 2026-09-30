@@ -1,0 +1,193 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   FUENTES
+   ========================= */
+
+@font-face {
+    font-family: "Slowing";
+    src: url("Slowing.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Starborn";
+    src: url("Starborn.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Cat Paw";
+    src: url("Cat paw.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Childer";
+    src: url("Childer.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Chocolate Crispy";
+    src: url("Popsicle.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Monster Comics";
+    src: url("Monster Comics.otf") format("opentype");
+}
+
+
+/* =========================
+   TU NOMBRE
+   ========================= */
+
+h1{
+    font-family: "Slowing";
+}
+
+
+/* =========================
+   DISEÑO GENERAL
+   DE LOS BOTONES
+   ========================= */
+
+a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: ivory;
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+
+/* =========================
+   BOTÓN 1
+   ROSA → MORADO
+   STARBORN
+   ========================= */
+
+.boton1{
+    background: #e8a9cf;
+    color: white;
+    border: #d17ab1 groove 5px;
+    box-shadow: 0px 0px 5px #e5a4d0;
+    font-family: "Starborn";
+}
+
+.boton1:hover{
+    background: #a979c9;
+    color: white;
+    border: #8d62ad groove 5px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px #c49cdd;
+    transition: 1s ease all;
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   BOTÓN 2
+   MORADO → AZUL
+   CAT PAW
+   ========================= */
+
+.boton2{
+    background: #a979c9;
+    color: white;
+    border: #8d62ad groove 5px;
+    box-shadow: 0px 0px 5px #c49cdd;
+    font-family: "Cat Paw";
+}
+
+.boton2:hover{
+    background: #78aee8;
+    color: white;
+    border: #5795d4 groove 5px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px #9cc7f1;
+    transition: 1s ease all;
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   BOTÓN 3
+   AZUL → VERDE
+   CHILDER
+   ========================= */
+
+.boton3{
+    background: #78aee8;
+    color: white;
+    border: #5795d4 groove 5px;
+    box-shadow: 0px 0px 5px #9cc7f1;
+    font-family: "Childer";
+}
+
+.boton3:hover{
+    background: #82c99a;
+    color: white;
+    border: #63ad7b groove 5px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px #a8dfb9;
+    transition: 1s ease all;
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   BOTÓN 4
+   VERDE → AMARILLO
+   CHOCOLATE CRISPY
+   ========================= */
+
+.boton4{
+    background: #82c99a;
+    color: white;
+    border: #63ad7b groove 5px;
+    box-shadow: 0px 0px 5px #a8dfb9;
+    font-family: "Popsicle";
+}
+
+.boton4:hover{
+    background: #e8cf70;
+    color: white;
+    border: #d1b64d groove 5px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px #f1df9c;
+    transition: 1s ease all;
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   BOTÓN 5
+   AMARILLO → NARANJA
+   MONSTER COMICS
+   ========================= */
+
+.boton5{
+    background: #e8cf70;
+    color: white;
+    border: #d1b64d groove 5px;
+    box-shadow: 0px 0px 5px #f1df9c;
+    font-family: "Monster Comics";
+}
+
+.boton5:hover{
+    background: #e99a61;
+    color: white;
+    border: #d67b3d groove 5px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px #f3ba8e;
+    transition: 1s ease all;
+    transform: scale(1.1);
+}

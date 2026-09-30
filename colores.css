@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #fff0f8 0%,
+        #f5dcff 35%,
+        #ddd6ff 65%,
+        #d9f1ff 100%
+    );
+    background-attachment: fixed;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #d9a7e8;
+    margin: 10px auto;
+}
+
+/* COLORES */
+
+#c1 {
+    background: pink;
+}
+
+#c2 {
+    background: plum;
+}
+
+#c3 {
+    background: lavender;
+}
+
+#c4 {
+    background: lightblue;
+}
+
+#c5 {
+    background: lightgreen;
+}
+
+#c6 {
+    background: khaki;
+}
+
+#c7 {
+    background: rgb(255, 182, 193);
+}
+
+#c8 {
+    background: rgb(186, 160, 230);
+}
+
+#c9 {
+    background: rgb(255, 160, 180);
+}
+
+
+/* DEGRADADOS LINEALES */
+
+#d1 {
+    background: linear-gradient(
+        90deg,
+        #e8b4d8 0%,
+        #b892c8 50%,
+        #9cc7f1 100%
+    );
+    color: white;
+}
+
+#d2 {
+    background: linear-gradient(
+        90deg,
+        #c49cdd 0%,
+        #f4a6c8 50%,
+        #f3ba8e 100%
+    );
+    color: white;
+}
+
+#d3 {
+    background: linear-gradient(
+        90deg,
+        #f4a6c8 0%,
+        #b69de8 50%,
+        #9cc7f1 100%
+    );
+}
+
+
+/* MÁS COLORES */
+
+#rgba1 {
+    background: rgba(255, 150, 190, 0.8);
+}
+
+#rgba2 {
+    background: rgba(150, 220, 180, 0.8);
+}
+
+#rgba3 {
+    background: rgba(150, 190, 240, 0.9);
+}
+
+
+/* HSL */
+
+#hsl1 {
+    background: hsl(330, 70%, 80%);
+}
+
+#hsl2 {
+    background: hsl(140, 50%, 75%);
+}
+
+#hsl3 {
+    background: hsl(210, 70%, 75%);
+}
+
+
+/* DEGRADADOS RADIALES */
+
+#rad1 {
+    background: radial-gradient(
+        circle,
+        #f4a6c8 0%,
+        #c49cdd 50%,
+        #9cc7f1 100%
+    );
+}
+
+#rad2 {
+    background: radial-gradient(
+        circle,
+        #f5df91 0%,
+        #f3ba8e 50%,
+        #f4a6c8 100%
+    );
+}
+
+#rad3 {
+    background: radial-gradient(
+        circle,
+        #a8dfb9 0%,
+        #9cc7f1 50%,
+        #b69de8 100%
+    );
+}
+
+
+/* HWB */
+
+#hwb1 {
+    background: hwb(330 60% 5%);
+}
+
+#hwb2 {
+    background: hwb(195 55% 5%);
+}
+
+#hwb3 {
+    background: hwb(280 55% 5%);
+}
