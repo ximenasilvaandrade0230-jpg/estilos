@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORDES EN CSS</title>
+    <link rel="stylesheet" href="bordes.css">
+</head>
+<body>
+    <h1>BORDES EN CSS</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p>La propiedad <code>border</code> dibuja una línea alrededor de un elemento. Se compone de tres valores: <b>grosor</b> (<code>border-width</code>), <b>estilo</b> (<code>border-style</code>) y <b>color</b> (<code>border-color</code>), que se pueden escribir juntos: <code>border: 3px solid red;</code>.</p>
+<p>Los estilos más usados son <code>solid</code>, <code>dashed</code>, <code>dotted</code> y <code>double</code>. También se pueden aplicar bordes por lado (<code>border-top</code>, <code>border-left</code>...) y redondear esquinas con <code>border-radius</code>.</p>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: Estilos de borde</h3>
+            <p>Cuatro estilos distintos: solid, dashed, dotted y double.</p>
+            <div class="demo">
+<div class="e1 a">solid</div>
+<div class="e1 b">dashed</div>
+<div class="e1 c">dotted</div>
+<div class="e1 d">double</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1 a&quot;&gt;solid&lt;/div&gt;
+&lt;div class=&quot;e1 b&quot;&gt;dashed&lt;/div&gt;
+&lt;div class=&quot;e1 c&quot;&gt;dotted&lt;/div&gt;
+&lt;div class=&quot;e1 d&quot;&gt;double&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 { padding: 8px; margin: 8px 0; }
+.e1.a { border: 4px solid #c2185b; }
+.e1.b { border: 4px dashed #c2185b; }
+.e1.c { border: 4px dotted #c2185b; }
+.e1.d { border: 6px double #c2185b; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: Bordes por lado</h3>
+            <p>Cada lado puede tener un borde distinto.</p>
+            <div class="demo">
+<div class="e2">Cuatro colores</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;Cuatro colores&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e2 { padding: 15px; border-top: 6px solid red; border-right: 6px solid green; border-bottom: 6px solid blue; border-left: 6px solid orange; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: Esquinas redondeadas</h3>
+            <p>border-radius suaviza las esquinas.</p>
+            <div class="demo">
+<div class="e3">Caja con esquinas redondas</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;Caja con esquinas redondas&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 { padding: 20px; border: 3px solid #333; border-radius: 15px; background: #fff3cd; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: Círculo</h3>
+            <p>Con width = height y border-radius: 50% se obtiene un círculo.</p>
+            <div class="demo">
+<div class="e4"></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 { width: 100px; height: 100px; border: 5px solid #1a4f9c; border-radius: 50%; background: #cfe3ff; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: Esquinas diferentes</h3>
+            <p>Se pueden dar valores distintos a cada esquina.</p>
+            <div class="demo">
+<div class="e5">Esquinas alternadas</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e5&quot;&gt;Esquinas alternadas&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e5 { padding: 25px; border: 3px solid #2a7a2a; border-radius: 40px 0 40px 0; background: #d4f5d4; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/bordes.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>

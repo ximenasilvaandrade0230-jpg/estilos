@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 30px;
+    line-height: 1.6;
+    color: #4a3a5a;
+    background: linear-gradient(135deg, #fff0f8 0%, #f5dcff 35%, #ddd6ff 65%, #d9f1ff 100%);
+    background-attachment: fixed;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    background-color: #c89bd8;
+    color: #ffffff;
+    margin: 0;
+}
+.regresar {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #e8b4d8;
+    color: white;
+    width: 300px;
+    font-size: 30px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #b892c8;
+}
+main { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+h2 { color: #9a6ab5; border-bottom: 2px solid #d7b4e6; padding-bottom: 4px; }
+code { background: #f1e4f8; padding: 1px 5px; border-radius: 4px; }
+.ejemplo { background: #fff5fc; border: 3px solid #d7b4e6; border-radius: 12px; padding: 15px; margin: 20px 0; }
+.demo { background: #ffffff; border: 2px dashed #c49cdd; padding: 15px; margin: 10px 0; overflow: auto; }
+pre { background: #3b2f4a; color: #f8f0ff; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 14px; }
+pre code { background: none; padding: 0; }
+.video { text-align: center; }
+.video video { max-width: 100%; }
+
+/* ===== EJEMPLOS ===== */
+.e1 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.e1 div { background: #cfe3ff; border: 2px solid #1a4f9c; padding: 15px; text-align: center; }
+.e2 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.e2 div { background: #ffd9b3; padding: 15px; text-align: center; }
+.e3 { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }
+.e3 div { background: #d4f5d4; padding: 15px; text-align: center; }
+.e4 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.e4 div { background: #ffe0ec; padding: 15px; text-align: center; }
+.e4 .ancho { grid-column: span 2; background: #c2185b; color: white; }
+.e5 { display: grid; grid-template-columns: 1fr 3fr; grid-template-areas: "encabezado encabezado" "menu contenido" "pie pie"; gap: 8px; }
+.e5 div { padding: 15px; text-align: center; color: white; }
+.e5 .enc { grid-area: encabezado; background: #c2185b; }
+.e5 .menu { grid-area: menu; background: #1a4f9c; }
+.e5 .cont { grid-area: contenido; background: #2a7a2a; }
+.e5 .pie { grid-area: pie; background: #555; }

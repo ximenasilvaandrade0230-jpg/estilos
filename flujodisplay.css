@@ -1,0 +1,47 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 30px;
+    line-height: 1.6;
+    color: #4a3a5a;
+    background: linear-gradient(135deg, #fff0f8 0%, #f5dcff 35%, #ddd6ff 65%, #d9f1ff 100%);
+    background-attachment: fixed;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    background-color: #c89bd8;
+    color: #ffffff;
+    margin: 0;
+}
+.regresar {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #e8b4d8;
+    color: white;
+    width: 300px;
+    font-size: 30px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #b892c8;
+}
+main { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+h2 { color: #9a6ab5; border-bottom: 2px solid #d7b4e6; padding-bottom: 4px; }
+code { background: #f1e4f8; padding: 1px 5px; border-radius: 4px; }
+.ejemplo { background: #fff5fc; border: 3px solid #d7b4e6; border-radius: 12px; padding: 15px; margin: 20px 0; }
+.demo { background: #ffffff; border: 2px dashed #c49cdd; padding: 15px; margin: 10px 0; overflow: auto; }
+pre { background: #3b2f4a; color: #f8f0ff; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 14px; }
+pre code { background: none; padding: 0; }
+.video { text-align: center; }
+.video video { max-width: 100%; }
+
+/* ===== EJEMPLOS ===== */
+.e1 div { background: #cfe3ff; margin: 5px 0; padding: 8px; }
+.e2 span { background: #ffd9b3; padding: 8px; }
+.e3 span { display: inline-block; width: 100px; height: 50px; background: #d4f5d4; border: 2px solid #2a7a2a; text-align: center; }
+.e4 .a, .e4 .c { background: #ffe0ec; padding: 8px; }
+.e4 .b { display: none; }
+.e5 ul { list-style: none; padding: 0; }
+.e5 li { display: inline-block; background: #c2185b; color: white; padding: 8px 14px; margin-right: 4px; }

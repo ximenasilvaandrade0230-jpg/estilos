@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMBRAS EN CSS</title>
+    <link rel="stylesheet" href="sombras.css">
+</head>
+<body>
+    <h1>SOMBRAS EN CSS</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p>Las sombras dan profundidad a la página. Hay dos propiedades principales:</p>
+<ul>
+    <li><code>box-shadow</code>: sombra de la caja. Sintaxis: <code>desplazamiento-x desplazamiento-y desenfoque expansión color</code>. Con la palabra <code>inset</code> la sombra va hacia adentro.</li>
+    <li><code>text-shadow</code>: sombra del texto. Sintaxis: <code>desplazamiento-x desplazamiento-y desenfoque color</code>.</li>
+</ul>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: Sombra básica</h3>
+            <p>5px a la derecha, 5px hacia abajo, 10px de desenfoque.</p>
+            <div class="demo">
+<div class="e1">Sombra gris</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1&quot;&gt;Sombra gris&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 { width: 200px; padding: 20px; background: white; box-shadow: 5px 5px 10px gray; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: Sombra suave de color</h3>
+            <p>Un desenfoque grande con color transparente da un efecto elegante.</p>
+            <div class="demo">
+<div class="e2">Sombra rosa suave</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;Sombra rosa suave&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e2 { width: 200px; padding: 20px; background: white; box-shadow: 0 10px 30px rgba(194, 24, 91, 0.5); }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: Sombra interna (inset)</h3>
+            <p>inset dibuja la sombra dentro de la caja.</p>
+            <div class="demo">
+<div class="e3">Sombra inset</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;Sombra inset&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 { width: 200px; padding: 20px; background: #eee; box-shadow: inset 0 0 15px #555; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: Sombra en texto</h3>
+            <p>text-shadow aplica sombra a las letras.</p>
+            <div class="demo">
+<p class="e4">Texto con sombra</p>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;p class=&quot;e4&quot;&gt;Texto con sombra&lt;/p&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 { font-size: 36px; font-weight: bold; color: #c2185b; text-shadow: 3px 3px 5px #999; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: Sombras múltiples</h3>
+            <p>Se pueden separar varias sombras con comas.</p>
+            <div class="demo">
+<div class="e5">Dos sombras</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e5&quot;&gt;Dos sombras&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e5 { width: 200px; padding: 20px; background: white; box-shadow: 5px 5px 0 #c2185b, 10px 10px 0 #1a4f9c; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/sombras.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>
+ 

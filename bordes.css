@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 30px;
+    line-height: 1.6;
+    color: #4a3a5a;
+    background: linear-gradient(135deg, #fff0f8 0%, #f5dcff 35%, #ddd6ff 65%, #d9f1ff 100%);
+    background-attachment: fixed;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    background-color: #c89bd8;
+    color: #ffffff;
+    margin: 0;
+}
+.regresar {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #e8b4d8;
+    color: white;
+    width: 300px;
+    font-size: 30px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #b892c8;
+}
+main { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+h2 { color: #9a6ab5; border-bottom: 2px solid #d7b4e6; padding-bottom: 4px; }
+code { background: #f1e4f8; padding: 1px 5px; border-radius: 4px; }
+.ejemplo { background: #fff5fc; border: 3px solid #d7b4e6; border-radius: 12px; padding: 15px; margin: 20px 0; }
+.demo { background: #ffffff; border: 2px dashed #c49cdd; padding: 15px; margin: 10px 0; overflow: auto; }
+pre { background: #3b2f4a; color: #f8f0ff; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 14px; }
+pre code { background: none; padding: 0; }
+.video { text-align: center; }
+.video video { max-width: 100%; }
+ 
+/* ===== EJEMPLOS ===== */
+.e1 { padding: 8px; margin: 8px 0; }
+.e1.a { border: 4px solid #c2185b; }
+.e1.b { border: 4px dashed #c2185b; }
+.e1.c { border: 4px dotted #c2185b; }
+.e1.d { border: 6px double #c2185b; }
+.e2 { padding: 15px; border-top: 6px solid red; border-right: 6px solid green; border-bottom: 6px solid blue; border-left: 6px solid orange; }
+.e3 { padding: 20px; border: 3px solid #333; border-radius: 15px; background: #fff3cd; }
+.e4 { width: 100px; height: 100px; border: 5px solid #1a4f9c; border-radius: 50%; background: #cfe3ff; }
+.e5 { padding: 25px; border: 3px solid #2a7a2a; border-radius: 40px 0 40px 0; background: #d4f5d4; }
+ 

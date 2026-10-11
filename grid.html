@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+    <h1>GRID</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p><b>CSS Grid</b> es un sistema de diseño en dos dimensiones: filas y columnas al mismo tiempo. Se activa con <code>display: grid</code> en el contenedor.</p>
+<ul>
+    <li><code>grid-template-columns</code> / <code>grid-template-rows</code>: definen las columnas y filas.</li>
+    <li><code>fr</code>: unidad fraccional que reparte el espacio disponible.</li>
+    <li><code>gap</code>: separación entre celdas.</li>
+    <li><code>grid-column</code> y <code>grid-row</code>: permiten que un elemento ocupe varias celdas.</li>
+    <li><code>grid-template-areas</code>: acomodo por nombres de áreas.</li>
+</ul>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: Tres columnas iguales</h3>
+            <p>repeat(3, 1fr) crea tres columnas del mismo tamaño.</p>
+            <div class="demo">
+<div class="e1"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.e1 div { background: #cfe3ff; border: 2px solid #1a4f9c; padding: 15px; text-align: center; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: Separación con gap</h3>
+            <p>gap agrega espacio entre filas y columnas.</p>
+            <div class="demo">
+<div class="e2"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e2 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.e2 div { background: #ffd9b3; padding: 15px; text-align: center; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: Columnas de distinto tamaño</h3>
+            <p>1fr 2fr: la segunda columna es el doble de ancha.</p>
+            <div class="demo">
+<div class="e3"><div>1fr</div><div>2fr</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;&lt;div&gt;1fr&lt;/div&gt;&lt;div&gt;2fr&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }
+.e3 div { background: #d4f5d4; padding: 15px; text-align: center; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: Ocupar varias columnas</h3>
+            <p>grid-column: span 2 hace que un elemento ocupe dos columnas.</p>
+            <div class="demo">
+<div class="e4"><div class="ancho">Ocupa 2</div><div>1</div><div>2</div><div>3</div><div>4</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;div class=&quot;ancho&quot;&gt;Ocupa 2&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.e4 div { background: #ffe0ec; padding: 15px; text-align: center; }
+.e4 .ancho { grid-column: span 2; background: #c2185b; color: white; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: Áreas con nombre</h3>
+            <p>grid-template-areas permite dibujar el diseño de la página.</p>
+            <div class="demo">
+<div class="e5"><div class="enc">Encabezado</div><div class="menu">Menú</div><div class="cont">Contenido</div><div class="pie">Pie</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e5&quot;&gt;&lt;div class=&quot;enc&quot;&gt;Encabezado&lt;/div&gt;&lt;div class=&quot;menu&quot;&gt;Menú&lt;/div&gt;&lt;div class=&quot;cont&quot;&gt;Contenido&lt;/div&gt;&lt;div class=&quot;pie&quot;&gt;Pie&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e5 { display: grid; grid-template-columns: 1fr 3fr; grid-template-areas: &quot;encabezado encabezado&quot; &quot;menu contenido&quot; &quot;pie pie&quot;; gap: 8px; }
+.e5 div { padding: 15px; text-align: center; color: white; }
+.e5 .enc { grid-area: encabezado; background: #c2185b; }
+.e5 .menu { grid-area: menu; background: #1a4f9c; }
+.e5 .cont { grid-area: contenido; background: #2a7a2a; }
+.e5 .pie { grid-area: pie; background: #555; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/grid.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>

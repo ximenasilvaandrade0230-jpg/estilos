@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONDOS EN CSS</title>
+    <link rel="stylesheet" href="fondos.css">
+</head>
+<body>
+    <h1>FONDOS EN CSS</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p>Las propiedades de fondo permiten decorar el área detrás del contenido de un elemento:</p>
+<ul>
+    <li><code>background-color</code>: color sólido.</li>
+    <li><code>background-image</code>: imagen o degradado (<code>url()</code>, <code>linear-gradient()</code>).</li>
+    <li><code>background-repeat</code>: si la imagen se repite o no.</li>
+    <li><code>background-size</code> y <code>background-position</code>: tamaño y ubicación de la imagen.</li>
+</ul>
+<p>También existe la forma abreviada <code>background</code>, que reúne todas.</p>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: Color de fondo</h3>
+            <p>background-color con un nombre o código hexadecimal.</p>
+            <div class="demo">
+<div class="e1">Fondo rosa</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1&quot;&gt;Fondo rosa&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 { background-color: #ffe0ec; padding: 20px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: Degradado lineal</h3>
+            <p>linear-gradient mezcla dos o más colores.</p>
+            <div class="demo">
+<div class="e2">Degradado de izquierda a derecha</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;Degradado de izquierda a derecha&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e2 { background: linear-gradient(to right, #ff9a9e, #fad0c4, #a1c4fd); padding: 30px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: Imagen de fondo</h3>
+            <p>background-image con background-size: cover para cubrir toda la caja.</p>
+            <div class="demo">
+<div class="e3">Imagen de fondo</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;Imagen de fondo&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 { height: 150px; background-image: url(&#x27;../img/foto.jpg&#x27;); background-size: cover; background-position: center; color: white; padding: 10px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: Imagen repetida</h3>
+            <p>background-repeat y background-size crean un patrón.</p>
+            <div class="demo">
+<div class="e4"></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 { height: 120px; background-image: url(&#x27;../img/foto.jpg&#x27;); background-size: 40px; background-repeat: repeat; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: Color con transparencia</h3>
+            <p>rgba() permite controlar la opacidad del fondo.</p>
+            <div class="demo">
+<div class="e5">Fondo semitransparente</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e5&quot;&gt;Fondo semitransparente&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e5 { padding: 25px; background-color: rgba(194, 24, 91, 0.3); border: 2px solid #c2185b; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/fondos.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>
+ 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMACIONES</title>
+    <link rel="stylesheet" href="animaciones.css">
+</head>
+<body>
+    <h1>ANIMACIONES</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p>CSS permite animar elementos sin JavaScript de dos maneras:</p>
+<ul>
+    <li><b>Transiciones</b> (<code>transition</code>): suavizan el cambio de una propiedad cuando ocurre un evento, como <code>:hover</code>.</li>
+    <li><b>Animaciones con keyframes</b> (<code>@keyframes</code>): definen pasos (<code>from</code>/<code>to</code> o porcentajes) y se aplican con <code>animation</code>.</li>
+</ul>
+<p>Propiedades de <code>animation</code>: <code>animation-name</code>, <code>animation-duration</code>, <code>animation-timing-function</code>, <code>animation-delay</code>, <code>animation-iteration-count</code> (por ejemplo <code>infinite</code>) y <code>animation-direction</code>.</p>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: Transición con hover</h3>
+            <p>Pasa el mouse sobre el cuadro: el color cambia suavemente.</p>
+            <div class="demo">
+<div class="e1">Pasa el mouse</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1&quot;&gt;Pasa el mouse&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 { width: 150px; padding: 20px; background: #cfe3ff; transition: background 0.5s, transform 0.5s; text-align: center; }
+.e1:hover { background: #c2185b; color: white; transform: scale(1.1); }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: Movimiento con @keyframes</h3>
+            <p>El cuadro se desplaza de izquierda a derecha y regresa.</p>
+            <div class="demo">
+<div class="e2"></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>@keyframes mover { from { margin-left: 0; } to { margin-left: 200px; } }
+.e2 { width: 60px; height: 60px; background: #c2185b; animation: mover 2s infinite alternate; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: Rotación infinita</h3>
+            <p>El cuadro gira de forma continua.</p>
+            <div class="demo">
+<div class="e3"></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>@keyframes girar { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.e3 { width: 70px; height: 70px; margin: 15px; background: #1a4f9c; animation: girar 2s linear infinite; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: Efecto pulso</h3>
+            <p>El círculo crece y se encoge con porcentajes.</p>
+            <div class="demo">
+<div class="e4"></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>@keyframes pulso { 0% { transform: scale(1); } 50% { transform: scale(1.3); } 100% { transform: scale(1); } }
+.e4 { width: 70px; height: 70px; margin: 15px; border-radius: 50%; background: #2a7a2a; animation: pulso 1.5s ease-in-out infinite; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: Cambio de color</h3>
+            <p>El fondo recorre varios colores.</p>
+            <div class="demo">
+<div class="e5">Arcoíris</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e5&quot;&gt;Arcoíris&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>@keyframes colores { 0% { background: red; } 33% { background: gold; } 66% { background: dodgerblue; } 100% { background: red; } }
+.e5 { width: 150px; padding: 25px; color: white; text-align: center; animation: colores 4s linear infinite; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/animaciones.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>

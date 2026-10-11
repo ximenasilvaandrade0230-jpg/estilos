@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSICIONAMIENTO</title>
+    <link rel="stylesheet" href="posicionamiento.css">
+</head>
+<body>
+    <h1>POSICIONAMIENTO</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p>La propiedad <code>position</code> define cómo se ubica un elemento. Se combina con <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code>:</p>
+<ul>
+    <li><code>static</code>: valor por defecto, sigue el flujo normal.</li>
+    <li><code>relative</code>: se desplaza respecto a su posición original.</li>
+    <li><code>absolute</code>: se ubica respecto al ancestro posicionado más cercano.</li>
+    <li><code>fixed</code>: se ubica respecto a la ventana y no se mueve al hacer scroll.</li>
+    <li><code>sticky</code>: se comporta como relative hasta que se hace scroll y entonces se "pega".</li>
+</ul>
+<p><code>z-index</code> controla qué elemento queda encima cuando se traslapan. Ejemplo de fixed: <code>.boton { position: fixed; bottom: 20px; right: 20px; }</code></p>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: position: static</h3>
+            <p>Es el valor normal. top y left no tienen efecto.</p>
+            <div class="demo">
+<div class="e1">Estoy en el flujo normal</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1&quot;&gt;Estoy en el flujo normal&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 { position: static; top: 50px; left: 50px; background: #eee; padding: 15px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: position: relative</h3>
+            <p>La caja se mueve 20px abajo y 40px a la derecha de donde estaría.</p>
+            <div class="demo">
+<div class="e2">Desplazado con relative</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;Desplazado con relative&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e2 { position: relative; top: 20px; left: 40px; background: #cfe3ff; padding: 15px; width: 200px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: position: absolute</h3>
+            <p>El hijo se ubica en la esquina inferior derecha del padre (que es relative).</p>
+            <div class="demo">
+<div class="e3">Padre<div class="hijo">Hijo absolute</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;Padre&lt;div class=&quot;hijo&quot;&gt;Hijo absolute&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 { position: relative; height: 120px; background: #eef; border: 2px solid #36a; }
+.e3 .hijo { position: absolute; bottom: 10px; right: 10px; background: #c2185b; color: white; padding: 8px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: z-index</h3>
+            <p>Dos cajas traslapadas: la de mayor z-index queda arriba.</p>
+            <div class="demo">
+<div class="e4"><div class="a">z-index 2</div><div class="b">z-index 1</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;div class=&quot;a&quot;&gt;z-index 2&lt;/div&gt;&lt;div class=&quot;b&quot;&gt;z-index 1&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 { position: relative; height: 130px; }
+.e4 div { position: absolute; width: 100px; height: 100px; color: white; padding: 5px; }
+.e4 .a { background: #c2185b; top: 0; left: 0; z-index: 2; }
+.e4 .b { background: #1a4f9c; top: 30px; left: 40px; z-index: 1; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: position: sticky</h3>
+            <p>Haz scroll dentro del cuadro: el encabezado se queda pegado arriba.</p>
+            <div class="demo">
+<div class="e5"><h4>Encabezado sticky</h4><p>Línea 1</p><p>Línea 2</p><p>Línea 3</p><p>Línea 4</p><p>Línea 5</p><p>Línea 6</p><p>Línea 7</p><p>Línea 8</p></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e5&quot;&gt;&lt;h4&gt;Encabezado sticky&lt;/h4&gt;&lt;p&gt;Línea 1&lt;/p&gt;&lt;p&gt;Línea 2&lt;/p&gt;&lt;p&gt;Línea 3&lt;/p&gt;&lt;p&gt;Línea 4&lt;/p&gt;&lt;p&gt;Línea 5&lt;/p&gt;&lt;p&gt;Línea 6&lt;/p&gt;&lt;p&gt;Línea 7&lt;/p&gt;&lt;p&gt;Línea 8&lt;/p&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e5 { height: 150px; overflow: auto; border: 2px solid #333; }
+.e5 h4 { position: sticky; top: 0; margin: 0; background: #ffd9b3; padding: 8px; }
+.e5 p { margin: 10px; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/posicionamiento.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>
