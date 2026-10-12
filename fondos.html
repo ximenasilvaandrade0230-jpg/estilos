@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FONDOS EN CSS</title>
     <link rel="stylesheet" href="fondos.css">
+    <style>
+        /* Estas reglas van despues de fondos.css, asi que mandan sobre las de alla.
+           Se prueban varias extensiones: se muestra la que exista en la carpeta img. */
+        .e3 {
+            height: 150px;
+            color: white;
+            padding: 10px;
+            background-image: url('img/j.jpg'), url('img/j.jpeg'), url('img/j.png'), url('img/j.webp'), url('img/j.gif');
+            background-size: cover;
+            background-position: center;
+        }
+        .e4 {
+            height: 120px;
+            background-image: url('img/j.jpg'), url('img/j.jpeg'), url('img/j.png'), url('img/j.webp'), url('img/j.gif');
+            background-size: 40px;
+            background-repeat: repeat;
+        }
+    </style>
 </head>
 <body>
     <h1>FONDOS EN CSS</h1>
@@ -51,7 +69,7 @@
             </div>
             <p><b>HTML:</b></p>
             <pre><code>&lt;div class=&quot;e3&quot;&gt;Imagen de fondo&lt;/div&gt;</code></pre>
-            <p><b>CSS:</b></p><pre><code>.e3 { height: 150px; background-image: url(&#x27;../img/foto.jpg&#x27;); background-size: cover; background-position: center; color: white; padding: 10px; }</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 { height: 150px; background-image: url(&#x27;img/j.jpg&#x27;); background-size: cover; background-position: center; color: white; padding: 10px; }</code></pre>
         </div>
         <div class="ejemplo">
             <h3>Ejemplo 4: Imagen repetida</h3>
@@ -61,7 +79,7 @@
             </div>
             <p><b>HTML:</b></p>
             <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;/div&gt;</code></pre>
-            <p><b>CSS:</b></p><pre><code>.e4 { height: 120px; background-image: url(&#x27;../img/foto.jpg&#x27;); background-size: 40px; background-repeat: repeat; }</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 { height: 120px; background-image: url(&#x27;img/j.jpg&#x27;); background-size: 40px; background-repeat: repeat; }</code></pre>
         </div>
         <div class="ejemplo">
             <h3>Ejemplo 5: Color con transparencia</h3>
@@ -84,4 +102,3 @@
     <a class="regresar" href="index.html">REGRESAR</a>
 </body>
 </html>
- 
