@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUJO NORMAL Y DISPLAY</title>
+    <link rel="stylesheet" href="flujodisplay.css">
+</head>
+<body>
+    <h1>FLUJO NORMAL Y DISPLAY</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p>El <b>flujo normal</b> es la forma en que el navegador acomoda los elementos si no le damos otras instrucciones: de arriba hacia abajo, uno tras otro.</p>
+<p>La propiedad <code>display</code> controla cómo se comporta cada elemento dentro de ese flujo:</p>
+<ul>
+    <li><code>block</code>: ocupa todo el ancho y empieza en una línea nueva (div, p, h1).</li>
+    <li><code>inline</code>: solo ocupa lo que mide su contenido y no rompe la línea (span, a).</li>
+    <li><code>inline-block</code>: va en línea pero permite width y height.</li>
+    <li><code>none</code>: oculta el elemento y no ocupa espacio.</li>
+    <li><code>flex</code> y <code>grid</code>: modelos de diseño avanzados.</li>
+</ul>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: display: block</h3>
+            <p>Los elementos block ocupan todo el ancho disponible, uno debajo del otro.</p>
+            <div class="demo">
+<div class="e1"><div>Bloque 1</div><div>Bloque 2</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1&quot;&gt;&lt;div&gt;Bloque 1&lt;/div&gt;&lt;div&gt;Bloque 2&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 div { background: #cfe3ff; margin: 5px 0; padding: 8px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: display: inline</h3>
+            <p>Los span son inline: se acomodan en la misma línea.</p>
+            <div class="demo">
+<div class="e2"><span>Uno</span><span>Dos</span><span>Tres</span></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;&lt;span&gt;Uno&lt;/span&gt;&lt;span&gt;Dos&lt;/span&gt;&lt;span&gt;Tres&lt;/span&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e2 span { background: #ffd9b3; padding: 8px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: display: inline-block</h3>
+            <p>Van en línea, pero aceptan ancho y alto.</p>
+            <div class="demo">
+<div class="e3"><span>Caja A</span><span>Caja B</span><span>Caja C</span></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;&lt;span&gt;Caja A&lt;/span&gt;&lt;span&gt;Caja B&lt;/span&gt;&lt;span&gt;Caja C&lt;/span&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 span { display: inline-block; width: 100px; height: 50px; background: #d4f5d4; border: 2px solid #2a7a2a; text-align: center; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: display: none</h3>
+            <p>El segundo bloque desaparece y no deja espacio.</p>
+            <div class="demo">
+<div class="e4"><div class="a">Visible 1</div><div class="b">Oculto</div><div class="c">Visible 2</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;div class=&quot;a&quot;&gt;Visible 1&lt;/div&gt;&lt;div class=&quot;b&quot;&gt;Oculto&lt;/div&gt;&lt;div class=&quot;c&quot;&gt;Visible 2&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 .a, .e4 .c { background: #ffe0ec; padding: 8px; }
+.e4 .b { display: none; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: Menú horizontal con display</h3>
+            <p>Una lista (block) se convierte en menú cambiando li a inline-block.</p>
+            <div class="demo">
+<nav class="e5"><ul><li>Inicio</li><li>Hobbies</li><li>Contacto</li></ul></nav>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;nav class=&quot;e5&quot;&gt;&lt;ul&gt;&lt;li&gt;Inicio&lt;/li&gt;&lt;li&gt;Hobbies&lt;/li&gt;&lt;li&gt;Contacto&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e5 ul { list-style: none; padding: 0; }
+.e5 li { display: inline-block; background: #c2185b; color: white; padding: 8px 14px; margin-right: 4px; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/flujodisplay.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>

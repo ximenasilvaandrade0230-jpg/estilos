@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOX</title>
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+    <h1>FLEXBOX</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p><b>Flexbox</b> es un modelo de diseño que acomoda elementos en una sola dimensión (fila o columna) de forma flexible. Se activa con <code>display: flex</code> en el contenedor (padre); sus hijos se convierten en "ítems flex".</p>
+<p>Propiedades principales del contenedor:</p>
+<ul>
+    <li><code>flex-direction</code>: <code>row</code> (fila) o <code>column</code> (columna).</li>
+    <li><code>justify-content</code>: alineación en el eje principal.</li>
+    <li><code>align-items</code>: alineación en el eje cruzado.</li>
+    <li><code>flex-wrap</code> y <code>gap</code>: saltos de línea y separación entre ítems.</li>
+</ul>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: display: flex</h3>
+            <p>Los hijos se acomodan en una fila.</p>
+            <div class="demo">
+<div class="e1"><div>1</div><div>2</div><div>3</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e1&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e1 { display: flex; }
+.e1 div { background: #cfe3ff; border: 2px solid #1a4f9c; padding: 15px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: justify-content: space-between</h3>
+            <p>Reparte el espacio sobrante entre los ítems.</p>
+            <div class="demo">
+<div class="e2"><div>A</div><div>B</div><div>C</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e2&quot;&gt;&lt;div&gt;A&lt;/div&gt;&lt;div&gt;B&lt;/div&gt;&lt;div&gt;C&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e2 { display: flex; justify-content: space-between; }
+.e2 div { background: #ffd9b3; border: 2px solid #c25b00; padding: 15px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: align-items: center</h3>
+            <p>Centra los ítems verticalmente dentro de un contenedor con altura.</p>
+            <div class="demo">
+<div class="e3"><div>Centrado</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e3&quot;&gt;&lt;div&gt;Centrado&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e3 { display: flex; justify-content: center; align-items: center; height: 150px; background: #eef; }
+.e3 div { background: #c2185b; color: white; padding: 15px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: flex-direction: column</h3>
+            <p>Los ítems se apilan en columna.</p>
+            <div class="demo">
+<div class="e4"><div>Arriba</div><div>Centro</div><div>Abajo</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e4&quot;&gt;&lt;div&gt;Arriba&lt;/div&gt;&lt;div&gt;Centro&lt;/div&gt;&lt;div&gt;Abajo&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e4 { display: flex; flex-direction: column; gap: 8px; }
+.e4 div { background: #d4f5d4; border: 2px solid #2a7a2a; padding: 10px; }</code></pre>
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: flex: 1 y gap</h3>
+            <p>flex: 1 hace que cada ítem ocupe el mismo espacio.</p>
+            <div class="demo">
+<div class="e5"><div>Uno</div><div>Dos</div><div>Tres</div></div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;e5&quot;&gt;&lt;div&gt;Uno&lt;/div&gt;&lt;div&gt;Dos&lt;/div&gt;&lt;div&gt;Tres&lt;/div&gt;&lt;/div&gt;</code></pre>
+            <p><b>CSS:</b></p><pre><code>.e5 { display: flex; gap: 10px; }
+.e5 div { flex: 1; background: #ffe0ec; border: 2px solid #c2185b; padding: 15px; text-align: center; }</code></pre>
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/flexbox.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+</body>
+</html>

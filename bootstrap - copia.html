@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CÓMO INCLUIR BOOTSTRAP EN HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <h1>CÓMO INCLUIR BOOTSTRAP EN HTML</h1>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <main>
+        <section>
+            <h2>1. Teoría básica</h2>
+<p><b>Bootstrap</b> es un framework de CSS (y JavaScript) que ofrece clases ya hechas para crear páginas responsivas rápidamente: botones, tarjetas, tablas, barras de navegación y una cuadrícula de 12 columnas.</p>
+<p>La forma más sencilla de incluirlo es mediante un <b>CDN</b>. Se agrega el enlace al CSS dentro del <code>&lt;head&gt;</code> y, opcionalmente, el script de JavaScript antes de cerrar el <code>&lt;/body&gt;</code>:</p>
+<pre><code>&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+<p>Esta misma página ya tiene Bootstrap incluido, por eso los ejemplos de abajo funcionan solo con clases.</p>
+        </section>
+        <section>
+            <h2>2. Cinco ejemplos básicos</h2>
+        <div class="ejemplo">
+            <h3>Ejemplo 1: Botones</h3>
+            <p>Las clases btn y btn-* dan estilo a los botones.</p>
+            <div class="demo">
+<button class="btn btn-primary">Primario</button>
+<button class="btn btn-success">Éxito</button>
+<button class="btn btn-danger">Peligro</button>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;button class=&quot;btn btn-primary&quot;&gt;Primario&lt;/button&gt;
+&lt;button class=&quot;btn btn-success&quot;&gt;Éxito&lt;/button&gt;
+&lt;button class=&quot;btn btn-danger&quot;&gt;Peligro&lt;/button&gt;</code></pre>
+            
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 2: Alertas</h3>
+            <p>La clase alert muestra mensajes de colores.</p>
+            <div class="demo">
+<div class="alert alert-success">¡Todo salió bien!</div>
+<div class="alert alert-warning">Cuidado con este mensaje.</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;alert alert-success&quot;&gt;¡Todo salió bien!&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;Cuidado con este mensaje.&lt;/div&gt;</code></pre>
+            
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 3: Cuadrícula de 12 columnas</h3>
+            <p>row y col-* dividen la fila; aquí 3 columnas de 4 espacios cada una.</p>
+            <div class="demo">
+<div class="row text-center">
+    <div class="col-4 bg-primary text-white p-3">col-4</div>
+    <div class="col-4 bg-secondary text-white p-3">col-4</div>
+    <div class="col-4 bg-dark text-white p-3">col-4</div>
+</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;row text-center&quot;&gt;
+    &lt;div class=&quot;col-4 bg-primary text-white p-3&quot;&gt;col-4&lt;/div&gt;
+    &lt;div class=&quot;col-4 bg-secondary text-white p-3&quot;&gt;col-4&lt;/div&gt;
+    &lt;div class=&quot;col-4 bg-dark text-white p-3&quot;&gt;col-4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 4: Tarjeta (card)</h3>
+            <p>El componente card agrupa título, texto y botón.</p>
+            <div class="demo">
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Mi tarjeta</h5>
+        <p class="card-text">Texto de ejemplo con Bootstrap.</p>
+        <a href="#" class="btn btn-primary">Aceptar</a>
+    </div>
+</div>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;div class=&quot;card&quot; style=&quot;width: 18rem;&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h5 class=&quot;card-title&quot;&gt;Mi tarjeta&lt;/h5&gt;
+        &lt;p class=&quot;card-text&quot;&gt;Texto de ejemplo con Bootstrap.&lt;/p&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Aceptar&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            
+        </div>
+        <div class="ejemplo">
+            <h3>Ejemplo 5: Tabla con estilo</h3>
+            <p>table y table-striped dan una tabla con filas alternadas.</p>
+            <div class="demo">
+<table class="table table-striped">
+    <thead><tr><th>#</th><th>Materia</th></tr></thead>
+    <tbody>
+        <tr><td>1</td><td>Programación</td></tr>
+        <tr><td>2</td><td>Matemáticas</td></tr>
+        <tr><td>3</td><td>Inglés</td></tr>
+    </tbody>
+</table>
+            </div>
+            <p><b>HTML:</b></p>
+            <pre><code>&lt;table class=&quot;table table-striped&quot;&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Materia&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Programación&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Matemáticas&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Inglés&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            
+        </div>
+        </section>
+        <section class="video">
+            <h2>3. Mi explicación en video</h2>
+            <video src="video/bootstrap.mp4" width="640" controls>
+                Tu navegador no soporta el elemento video.
+            </video>
+        </section>
+    </main>
+    <a class="regresar" href="index.html">REGRESAR</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
